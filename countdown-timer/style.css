@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./neom-GCrvnNHJAMo-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15rem;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 7rem;
+  color: rgba(0, 238, 255, 0.822);
+  box-shadow: 1rem 1rem 1rem rgba(#000, 1);
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 5rem;
+  margin: 0 2rem;
+  color: rgba(0, 238, 255, 0.822);
+}
+.countdown-container {
+  margin-top: -3rem;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.countdown-el {
+  text-align: center;
+}
+
+.countdown-el span {
+  font-size: 1.5rem;
+  color: rgba(0, 238, 255, 0.822);
+}
