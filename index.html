@@ -5,43 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10 Projects</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <div class="projects-container">
-      <h1>10 Projects</h1>
-      <ul>
-        <li>
-          <span>1 - </span
-          ><a href="./01 - Countdown-Timer/index.html" target="_blank"
-            >Countdown-Timer</a
-          >
-        </li>
-        <li>
-          <span>2 - </span
-          ><a href="./02 - Quiz-App/index.html" target="_blank">Quiz-App</a>
-        </li>
-        <li>
-          <span>3 - </span
-          ><a href="./03 - Clock/index.html" target="_blank">Clock</a>
-        </li>
-        <li>
-          <span>4 - </span
-          ><a href="./04 - Random-Shit/index.html" target="_blank"
-            >Random Shit</a
-          >
-        </li>
-        <li>
-          <span>5 - </span><a href="./05 - TimeLine/index.html">Time Line</a>
-        </li>
-        <li>
-          <span>6 - </span><a href="./06 - Calculator/index.html">Calculator</a>
-        </li>
-        <li>
-          <span>7 - </span
-          ><a href="./07 - Weather App/index.html">Weather App</a>
-        </li>
-        <li><span>8 - </span><a href="">NOTHING YET</a></li>
-      </ul>
+    <div class="container">
+      <div class="header">
+        <span style="--clr: #ff2972">Total</span>
+        <span style="--clr: #fee800">Coding</span>
+        <span style="--clr: #04fc43">Days</span>
+      </div>
+      <div id="time">
+        <div class="circle" style="--clr: #ff2f4f">
+          <div class="dots month_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mmonth"></circle>
+          </svg>
+          <div id="month">00</div>
+        </div>
+        <div class="circle" style="--clr: #ff2f4f">
+          <div class="dots day_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="dd"></circle>
+          </svg>
+          <div id="days">00</div>
+        </div>
+      </div>
+      <div id="time">
+        <div class="circle" style="--clr: #ff2972">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div id="hours">00</div>
+        </div>
+
+        <div class="circle" style="--clr: #fee800">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div id="minutes">00</div>
+        </div>
+
+        <div class="circle" style="--clr: #04fc43">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div id="seconds">00</div>
+        </div>
+        <div class="ap">
+          <div id="ampm">12H</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
