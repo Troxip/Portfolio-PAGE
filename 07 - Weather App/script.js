@@ -36,6 +36,8 @@ async function checkWeather(city) {
   }
   if (data.weather[0].main === "Rain") {
     weatherIcon.src = "./images/Rain.png";
+    document.querySelector(".weather-icon").style.opacity = "0";
+    document.querySelector(".animated-storm").style.display = "block";
   }
   if (data.weather[0].main === "Mist") {
     weatherIcon.src = "./images/Mist.png";
@@ -91,3 +93,27 @@ function changeDigits(e) {
     e.target.setAttribute("data-unit", newUnit);
   }
 }
+
+function rain() {
+  let cloud = document.querySelector(".animated-storm");
+  let e = document.createElement("div");
+  let left = Math.floor(Math.random() * 17);
+  let width = Math.random() * 5;
+  let height = Math.random() * 25;
+  let duration = Math.random() * 0.25;
+
+  e.classList.add("drop");
+  cloud.appendChild(e);
+  e.style.left = left + "rem";
+  e.style.width = 0.5 + width + "px";
+  e.style.height = 0.5 + height + "px";
+  e.style.animationDuration = 1 + duration + "s";
+
+  setTimeout(() => {
+    cloud.removeChild(e);
+  }, 2000);
+}
+
+setInterval(function () {
+  rain();
+}, 70);
