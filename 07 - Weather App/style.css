@@ -66,8 +66,15 @@ body {
   width: 17rem;
   margin: 3rem 0;
 }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .temp {
   font-size: 8rem;
+  cursor: pointer;
 }
 
 .city {
@@ -80,6 +87,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 6rem;
+  gap: 4rem;
 }
 
 .details img {
@@ -101,4 +109,13 @@ body {
 .col .wind {
   font-size: 2.5rem;
   font-weight: bold;
+}
+.wind {
+  cursor: pointer;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-size: 1.5rem;
 }
