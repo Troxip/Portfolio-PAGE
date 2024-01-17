@@ -161,7 +161,7 @@ function fromStartDate() {
   sec_dot.style.transform = `rotate(${s * 6}deg)`;
   // 360 / 60(Number of Seconds in One Minute) = 6
 }
-let current = updateTime;
+let current = fromStartDate;
 setInterval(() => current());
 
 const switchBtn = document.getElementById("ampm");

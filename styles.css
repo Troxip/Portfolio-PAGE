@@ -111,3 +111,21 @@ body {
   display: flex;
   font-size: 1.75rem;
 }
+
+#time.top {
+  display: none;
+}
+
+.h3 {
+  display: none;
+}
+
+#ampm {
+  transition: all 0.3s;
+  text-wrap: nowrap;
+}
+
+#ampm:hover {
+  cursor: pointer;
+  color: green;
+}
