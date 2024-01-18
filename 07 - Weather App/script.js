@@ -29,21 +29,21 @@ async function checkWeather(city) {
 
   //Change
   if (data.weather[0].main === "Clouds") {
-    weatherIcon.src = "images/clouds.png";
+    weatherIcon.src = "../07 - Weather App/images/clouds.png";
   }
   if (data.weather[0].main === "Clear") {
-    weatherIcon.src = "images/clear.png";
+    weatherIcon.src = "../07 - Weather App/images/clear.png";
   }
   if (data.weather[0].main === "Rain") {
-    weatherIcon.src = "images/Rain.png";
+    weatherIcon.src = "../07 - Weather App/images/Rain.png";
     document.querySelector(".weather-icon").style.opacity = "0";
     document.querySelector(".animated-storm").style.display = "block";
   }
   if (data.weather[0].main === "Mist") {
-    weatherIcon.src = "images/Mist.png";
+    weatherIcon.src = "../07 - Weather App/images/Mist.png";
   }
   if (data.weather[0].main === "Snow") {
-    weatherIcon.src = "images/Snow.png";
+    weatherIcon.src = "../07 - Weather App/images/Snow.png";
   }
 
   //Change Digits
