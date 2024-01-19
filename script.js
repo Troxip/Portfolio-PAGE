@@ -84,8 +84,8 @@ function updateTime() {
 function fromStartDate() {
   //Display 2 more clocks
   document.querySelector(".top").style.display = "flex";
-  document.querySelector(".h1").innerHTML = "Total";
-  document.querySelector(".h2").innerHTML = "Coding";
+  document.querySelector(".h1").innerHTML = "Coding";
+  document.querySelector(".h2").innerHTML = "Odyssey";
   document.querySelector(".h3").style.display = "block";
   document.getElementById("ampm").innerHTML = "Clock";
 
