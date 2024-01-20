@@ -2,6 +2,7 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movie = document.getElementById("movie");
 const seats = document.querySelectorAll(".row .seat:not(.occupied)");
+const unselect = document.getElementById("unselect");
 let counter = 0;
 
 populateUI();
@@ -23,8 +24,8 @@ movie.addEventListener("change", (e) => {
 function selectedSeat(e) {
   isSelected = e.target.classList.toggle("selected");
   if (e.target.classList.contains("seat")) counter += isSelected ? 1 : -1;
+  total.textContent = counter * movie.value;
   count.textContent = counter;
-  total.textContent = counter * +movie.value;
   saveCookie();
 }
 
@@ -60,4 +61,19 @@ function updateTotal() {
   counter = JSON.parse(localStorage.getItem("selectedSeats")).length;
   total.textContent = counter * movie.value;
   count.textContent = counter;
+}
+
+//Unselect all seats
+unselect.addEventListener("click", unselectSeats);
+function unselectSeats() {
+  counter = 0;
+  updateSeats();
+}
+
+function updateSeats() {
+  total.textContent = counter * movie.value;
+  count.textContent = counter;
+  seats.forEach((e) => {
+    e.className = "seat";
+  });
 }

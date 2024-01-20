@@ -116,3 +116,16 @@ body {
 p.text span {
   color: #6feaf6;
 }
+
+#unselect {
+  margin-left: 10px;
+  color: #b3b3b3a2;
+  cursor: pointer;
+  border: none;
+  padding: 2px 5px;
+  background-color: #414141;
+}
+
+#unselect:active {
+  transform: scale(1.05);
+}
