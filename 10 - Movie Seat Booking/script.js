@@ -58,9 +58,17 @@ function populateUI() {
 
 // Update seats selected and price on page load
 function updateTotal() {
-  counter = JSON.parse(localStorage.getItem("selectedSeats")).length;
-  total.textContent = counter * movie.value;
-  count.textContent = counter;
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
+  if (selectedSeats !== null) {
+    counter = selectedSeats.length;
+    total.textContent = counter * movie.value;
+    count.textContent = counter;
+  } else {
+    counter = 0;
+    total.textContent = "0";
+    count.textContent = "0";
+  }
 }
 
 //Unselect all seats

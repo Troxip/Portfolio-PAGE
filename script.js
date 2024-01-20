@@ -89,7 +89,7 @@ function fromStartDate() {
   document.querySelector(".h3").style.display = "block";
   document.getElementById("ampm").innerHTML = "Clock";
 
-  const startDate = new Date("2023-11-03T12:30:00");
+  const startDate = new Date("2023-11-01T12:30:00");
   // Get the current date and time
   const currentDate = new Date();
   const timeDifference = currentDate - startDate;
