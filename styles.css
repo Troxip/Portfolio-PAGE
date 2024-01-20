@@ -198,6 +198,7 @@ body {
   font-weight: bold;
   color: rgb(255, 116, 116);
   transition: all 0.2s ease-in;
+  text-align: center;
 }
 .project figcaption:hover {
   color: rgb(248, 84, 84);
