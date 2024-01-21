@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meal Finder</h1>
+      <div class="flex">
+        <form id="submit" class="flex">
+          <input
+            type="text"
+            name=""
+            id="search"
+            placeholder="Search for meals or keywords"
+          />
+          <button class="search-btn" type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </form>
+
+        <button class="random-btn" id="random">
+          <ion-icon name="shuffle-outline"></ion-icon>
+        </button>
+      </div>
+      <div id="results-heading"></div>
+      <div id="meals" class="meals"></div>
+      <div id="single-meal"></div>
+    </div>
+  </body>
+</html>
