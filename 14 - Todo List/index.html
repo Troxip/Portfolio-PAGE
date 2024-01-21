@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dates">
+        <p class="date">Mon Jan 23 2023</p>
+        <p class="time">17:04:10</p>
+      </div>
+
+      <header>
+        <h1>To Do List</h1>
+      </header>
+
+      <form class="todo-form">
+        <h2>Add Your Task Here</h2>
+        <div class="form-control">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Type here about your task"
+          />
+          <button id="todo-submit" type="submit">
+            <ion-icon class="icon" name="add-outline"></ion-icon>
+          </button>
+        </div>
+      </form>
+
+      <form class="edit-form hide">
+        <h2>Edit Your Task</h2>
+        <div class="form-control">
+          <input
+            type="text"
+            id="edit-input"
+            placeholder="Type here about your task"
+          />
+          <button id="edit-submit" type="submit">
+            <ion-icon class="icon" name="checkmark-done-outline"></ion-icon>
+          </button>
+        </div>
+        <button type="button" id="cancel-edit-btn">Cancel</button>
+      </form>
+
+      <div class="todos"></div>
+    </div>
+  </body>
+</html>
