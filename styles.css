@@ -202,7 +202,7 @@ body {
 }
 .project figcaption:hover {
   color: rgb(248, 84, 84);
-  transform: translateX(5px) scale(1.05);
+  transform: scale(1.05);
 }
 
 .project p {
