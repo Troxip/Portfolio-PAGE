@@ -6,15 +6,47 @@ const form = document.getElementById("form");
 const text = document.getElementById("text");
 const amount = document.getElementById("amount");
 
-const dummyTransactions = [
-  { id: 1, text: "Flower", amount: -20 },
-  { id: 2, text: "Salary", amount: 300 },
-  { id: 3, text: "Pizza", amount: -10 },
-  { id: 4, text: "Sold PC", amount: 280 },
-  { id: 5, text: "Camera", amount: -85 },
-];
+const localStorageTransactions = JSON.parse(
+  localStorage.getItem("transactions")
+);
 
-let transactions = dummyTransactions;
+let transactions =
+  localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
+
+//Add Transactions
+function addTransaction(e) {
+  e.preventDefault();
+
+  if (!text.value.trim() || !amount.value.trim()) {
+  } else {
+    const transaction = {
+      id: generateID(),
+      text: text.value,
+      amount: +amount.value,
+    };
+
+    transactions.push(transaction);
+    addTransactionToDom(transaction);
+    updateValues();
+
+    UpdateLocalStorage();
+
+    text.value = "";
+    amount.value = "";
+  }
+}
+
+//Generate Random ID
+function generateID() {
+  return Math.floor(Math.random() * 100000);
+}
+
+function removeTransaction(id) {
+  transactions = transactions.filter((transaction) => transaction.id !== id);
+
+  UpdateLocalStorage();
+  init();
+}
 
 function addTransactionToDom(transaction) {
   //Get Sign
@@ -28,7 +60,9 @@ function addTransactionToDom(transaction) {
   item.innerHTML = `
   ${transaction.text}<span>${sign}${Math.abs(
     transaction.amount
-  )}</span><button class="delete-btn">x</button>
+  )}</span><button class="delete-btn" onclick = "removeTransaction(${
+    transaction.id
+  })">x</button>
   `;
   list.appendChild(item);
 }
@@ -58,3 +92,10 @@ function init() {
 }
 
 init();
+
+//Update Local Storage Trans
+function UpdateLocalStorage() {
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+}
+
+form.addEventListener("submit", addTransaction);
