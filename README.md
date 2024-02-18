@@ -1,3 +1,3 @@
 # 10-projects
 
-Link: https://abdurahim121701.github.io/Portfolio-PAGE/
+Link: https://troxip.github.io/Portfolio-PAGE/
